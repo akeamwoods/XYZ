@@ -1,46 +1,33 @@
-# Getting Started with Create React App
+# XYZ
+## Notes
+This is by no means a finished piece. I didn't want to spend more than the estimated time as I wasn't sure whether it was a hard limit. All in all this took roughly 4 hours. I think it would be rather ambitious to implement all the requirements in 2-3 hours. The only thing I am missing here is pagination, which I can add, although as previously mentioned I didn't want to spend much more than the time recommended. Some of the filtering code ended up messier than I would've liked; I would use selectors to handle this if I were to re-write it.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Main packages used:
+- react-virtualised
+- immer
+- react-router
+- recharts
+- redux-saga
+- styled components
+- typesfe-actions
 
-## Available Scripts
+#### React Virtualised
+I chose this package for the table implementation as when dealing with large quantites of data it is good to virtualise it and only load what is currently on display. This package is a little outdated and the maintainers no longer update it, so you may see a console warning about a deprecated method which stems from this.
 
-In the project directory, you can run:
+#### immer
+Immer is my go to when using redux. The ability to use a mutable draft representation of the store makes logic much more concise.
 
-### `yarn start`
+#### react-router
+I used this to handle the navigation/multiple routes. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#### recharts
+I've never used this package before but i've read good things about it and it seems to offer powerful features. 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+#### redux-saga
+Although the stranger syntax due to generator functions can scare peopel away, once you have used sagas a couple of times it seems like the obvious choice for middleware. I used a saga to handle the autosuggest feature whereby I race 300ms vs the user typing, this means it does not dispatch an action on every keystroke to update the suggestions but waits until there is a 300ms delay (which suggests the user has paused typing).
 
-### `yarn test`
+#### styled-components 
+My favourite package for handling styling. I haven't explored many alternative but I enjoy the modular and separation it grants between components and styling (you'll see i follow an index/style file approach throughout. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### typesafe-actions
+I frequently use this package as I enjoy the benefit of having a typesafe reducer. It helps prevent silly bugs and greatly increases my development time.
