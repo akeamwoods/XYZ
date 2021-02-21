@@ -26,7 +26,7 @@ I used this to handle the navigation/multiple routes.
 I've never used this package before but i've read good things about it and it seems to offer powerful features. 
 
 #### redux-saga
-Although the stranger syntax due to generator functions can scare peopel away, once you have used sagas a couple of times it seems like the obvious choice for middleware. I used a saga to handle the autosuggest feature whereby I race 300ms vs the user typing, this means it does not dispatch an action on every keystroke to update the suggestions but waits until there is a 300ms delay (which suggests the user has paused typing).
+Although the stranger syntax due to generator functions can scare people away, once you have used sagas a couple of times it seems like the obvious choice for middleware. I used a saga to handle the autosuggest feature whereby I race 300ms vs the user typing, this means it does not dispatch an action on every keystroke to update the suggestions but waits until there is a 300ms delay (which suggests the user has paused typing).
 
 #### styled-components 
 My favourite package for handling styling. I haven't explored many alternatives but I enjoy the modular and separation it grants between components and styling (you'll see i follow an index/style file approach throughout. 
