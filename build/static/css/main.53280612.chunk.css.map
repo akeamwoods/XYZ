@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/style.css"],"names":[],"mappings":"AAAA,qBAIE,QAAS,CACT,UAAW,CACX,YAAa,CACb,WAAY,CACZ,mBAAoB,CACpB,mCACF","file":"main.53280612.chunk.css","sourcesContent":["html,\nbody,\n.App,\n#root {\n  margin: 0;\n  width: 100%;\n  display: flex;\n  height: 100%;\n  align-items: stretch;\n  font-family: Roboto, Arial, sans-serif;\n}\n"]}
