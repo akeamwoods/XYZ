@@ -1,4 +1,6 @@
 # XYZ
+Demo: http://akeamwoods.github.io/XYZ
+
 ## Notes
 This is by no means a finished piece. I didn't want to spend more than the estimated time as I wasn't sure whether it was a hard limit. All in all this took roughly 4 hours. I think it would be rather ambitious to implement all the requirements in 2-3 hours. The only thing I am missing here is pagination, which I am perfectly capable of implementing, although as previously mentioned I didn't want to spend much more than the time recommended. Some of the filtering code ended up messier than I would've liked; I would use selectors to handle this if I were to rewrite it. 
 
